@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.oop.groupthirteen.group13simulatingoperationsofwholesaleclub.Amrin.inventoryManager.incomingShipment">
+    <children>
+        <Text layoutX="167.0" layoutY="34.0" text="Incoming Shipment ">
+            <font><Font size="32.0"/></font>
+        </Text>
+
+        <TextField fx:id="shipmentIdField" layoutX="69.0" layoutY="67.0" prefWidth="160.0" promptText="shipment ID"/>
+        <TextField fx:id="productNameField" layoutX="340.0" layoutY="68.0" prefWidth="160.0" promptText="product Name"/>
+        <DatePicker fx:id="importDatePicker" layoutX="70.0" layoutY="119.0" prefWidth="160.0" promptText="Import Date"/>
+        <ComboBox fx:id="categoryComboBox" layoutX="340.0" layoutY="112.0" prefWidth="160.0" promptText="category"/>
+        <DatePicker fx:id="expiryDatePicker" layoutX="69.0" layoutY="169.0" prefWidth="160.0" promptText="Expiry Date"/>
+
+        <Button fx:id="saveButton" layoutX="342.0" layoutY="169.0" prefWidth="160.0" text="Save" onAction="#handleSaveAction"/>
+        <Button fx:id="backButton" layoutX="34.0" layoutY="15.0" text="Back" onAction="#handleBackAction"/>
+
+        <TableView fx:id="shipmentTableView" layoutX="14.0" layoutY="209.0" prefHeight="178.0" prefWidth="569.0">
+            <columns>
+                <TableColumn fx:id="shipmentIdColumn" text="shipment ID" prefWidth="81.0"/>
+                <TableColumn fx:id="productNameColumn" text="product Name" prefWidth="132.0"/>
+                <TableColumn fx:id="importDateColumn" text="Import Date" prefWidth="138.0"/>
+                <TableColumn fx:id="categoryColumn" text="category" prefWidth="116.0"/>
+                <TableColumn fx:id="expiryDateColumn" text="Expiry Date" prefWidth="100.0"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

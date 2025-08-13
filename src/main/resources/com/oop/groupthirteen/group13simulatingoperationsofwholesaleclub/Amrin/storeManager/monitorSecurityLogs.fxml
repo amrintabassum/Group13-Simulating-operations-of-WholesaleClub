@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.oop.groupthirteen.group13simulatingoperationsofwholesaleclub.Amrin.storeManager.monitorSecurityLogs">
+
+    <children>
+        <Text layoutX="211.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Security Logs">
+            <font>
+                <Font size="30.0"/>
+            </font>
+        </Text>
+
+        <Button fx:id="backButton" layoutX="43.0" layoutY="18.0" mnemonicParsing="false" text="Back" onAction="#handleBack"/>
+
+        <DatePicker fx:id="datePicker" layoutX="86.0" layoutY="132.0" promptText="Date"/>
+        <TextField fx:id="timeField" layoutX="299.0" layoutY="132.0" promptText="Time"/>
+
+        <Button fx:id="addButton" layoutX="111.0" layoutY="175.0" mnemonicParsing="false" text="Add" onAction="#handleAdd"/>
+        <Button fx:id="updateButton" layoutX="246.0" layoutY="176.0" mnemonicParsing="false" text="Update" onAction="#handleUpdate"/>
+        <Button fx:id="deleteButton" layoutX="393.0" layoutY="176.0" mnemonicParsing="false" text="Delete" onAction="#handleDelete"/>
+
+        <Label fx:id="alertLabel" layoutX="52.0" layoutY="214.0" prefHeight="156.0" prefWidth="520.0" text="Alert At" wrapText="true" style="-fx-font-weight: bold;"/>
+    </children>
+</AnchorPane>

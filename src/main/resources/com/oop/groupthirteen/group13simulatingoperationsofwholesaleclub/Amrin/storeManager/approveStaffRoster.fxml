@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.oop.groupthirteen.group13simulatingoperationsofwholesaleclub.Amrin.storeManager.approveStaffRoster">
+
+    <children>
+        <Text layoutX="166.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Approve Staff Roster">
+            <font>
+                <Font size="30.0"/>
+            </font>
+        </Text>
+
+        <Button fx:id="backButton" layoutX="27.0" layoutY="7.0" mnemonicParsing="false" text="Back" onAction="#handleBack"/>
+
+        <TextField fx:id="staffIdField" layoutX="36.0" layoutY="66.0" prefHeight="26.0" prefWidth="186.0" promptText="Staff ID"/>
+        <TextField fx:id="staffNameField" layoutX="331.0" layoutY="66.0" prefHeight="26.0" prefWidth="186.0" promptText="Name of Staff"/>
+        <DatePicker fx:id="validationDatePicker" layoutX="37.0" layoutY="107.0" promptText="Validate end"/>
+
+        <ComboBox fx:id="jobPositionCombo" layoutX="36.0" layoutY="148.0" prefHeight="26.0" prefWidth="186.0" promptText="Job Position"/>
+        <ComboBox fx:id="shiftCombo" layoutX="330.0" layoutY="108.0" prefHeight="26.0" prefWidth="186.0" promptText="Staff Shift"/>
+
+        <Button fx:id="saveButton" layoutX="331.0" layoutY="147.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="186.0" text="Save" onAction="#handleSave"/>
+
+        <TreeTableView fx:id="staffTreeTable" layoutX="21.0" layoutY="186.0" prefHeight="200.0" prefWidth="559.0">
+            <columns>
+                <TreeTableColumn fx:id="staffIdColumn" prefWidth="75.0" text="Staff ID"/>
+                <TreeTableColumn fx:id="staffNameColumn" prefWidth="114.0" text="Name of Staff"/>
+                <TreeTableColumn fx:id="validateColumn" prefWidth="131.0" text="Validate End"/>
+                <TreeTableColumn fx:id="shiftColumn" prefWidth="115.0" text="Staff Shift"/>
+                <TreeTableColumn fx:id="positionColumn" prefWidth="123.0" text="Job Position"/>
+            </columns>
+        </TreeTableView>
+    </children>
+</AnchorPane>
