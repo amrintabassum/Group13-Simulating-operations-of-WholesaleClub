@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.oop.groupthirteen.group13simulatingoperationsofwholesaleclub.Bashar.accountOfficer.generateRevenueReportsController">
+
+    <children>
+        <Button fx:id="backButton" layoutX="236.0" layoutY="445.0" mnemonicParsing="false"
+                prefHeight="26.0" prefWidth="367.0" text="Back" onAction="#handleBack"/>
+
+        <ComboBox fx:id="productNameCombo" layoutX="84.0" layoutY="75.0" prefHeight="26.0"
+                  prefWidth="275.0" promptText="Product Name" onAction="#handleProductSelect"/>
+        <TextField fx:id="priceField" layoutX="434.0" layoutY="74.0" prefHeight="26.0"
+                   prefWidth="266.0" promptText="Price" editable="false"/>
+
+        <DatePicker fx:id="datePicker" layoutX="80.0" layoutY="136.0" prefHeight="26.0"
+                    prefWidth="275.0" promptText="Date"/>
+        <TextField fx:id="revenueField" layoutX="434.0" layoutY="135.0" prefHeight="26.0"
+                   prefWidth="266.0" promptText="Revenue"/>
+
+        <Button fx:id="saveButton" layoutX="320.0" layoutY="170.0" mnemonicParsing="false"
+                prefHeight="26.0" prefWidth="150.0" text="Save" onAction="#handleSave"/>
+
+        <TableView fx:id="revenueTable" layoutX="22.0" layoutY="210.0" prefHeight="213.0" prefWidth="764.0">
+            <columns>
+                <TableColumn fx:id="productNameColumn" prefWidth="211.0" text="Product Name"/>
+                <TableColumn fx:id="priceColumn" prefWidth="197.0" text="Price"/>
+                <TableColumn fx:id="dateColumn" prefWidth="187.0" text="Date"/>
+                <TableColumn fx:id="revenueColumn" prefWidth="166.0" text="Revenue"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

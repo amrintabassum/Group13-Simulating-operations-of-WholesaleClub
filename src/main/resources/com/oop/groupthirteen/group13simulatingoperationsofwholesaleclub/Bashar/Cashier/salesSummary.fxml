@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.oop.groupthirteen.group13simulatingoperationsofwholesaleclub.Bashar.Cashier.salesSummaryController"
+            prefHeight="500.0" prefWidth="800.0">
+
+    <children>
+        <Button fx:id="backButton" layoutX="289.0" layoutY="448.0" prefHeight="26.0" prefWidth="314.0"
+                text="Back" onAction="#handleBack"/>
+
+        <TextField fx:id="transactionField" layoutX="27.0" layoutY="46.0" prefHeight="26.0" prefWidth="231.0"
+                   promptText="Today’s transactions"/>
+
+        <TextField fx:id="totalProductField" layoutX="286.0" layoutY="46.0" prefHeight="26.0" prefWidth="231.0"
+                   promptText="Total product"/>
+
+        <ComboBox fx:id="productComboBox" layoutX="548.0" layoutY="46.0" prefHeight="26.0" prefWidth="231.0"
+                  promptText="Product Name"/>
+
+        <TextField fx:id="priceField" layoutX="24.0" layoutY="98.0" prefHeight="26.0" prefWidth="231.0"
+                   promptText="Price"/>
+
+        <Button fx:id="saveButton" layoutX="284.0" layoutY="99.0" prefHeight="26.0" prefWidth="232.0"
+                text="Save" onAction="#handleSave"/>
+
+        <TableView fx:id="salesTable" layoutX="15.0" layoutY="153.0" prefHeight="261.0" prefWidth="773.0">
+            <columns>
+                <TableColumn fx:id="transactionColumn" prefWidth="153.0" text="Today’s Transactions"/>
+                <TableColumn fx:id="totalProductColumn" prefWidth="200.0" text="Total Product"/>
+                <TableColumn fx:id="productNameColumn" prefWidth="245.0" text="Product Name"/>
+                <TableColumn fx:id="priceColumn" prefWidth="172.0" text="Price"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

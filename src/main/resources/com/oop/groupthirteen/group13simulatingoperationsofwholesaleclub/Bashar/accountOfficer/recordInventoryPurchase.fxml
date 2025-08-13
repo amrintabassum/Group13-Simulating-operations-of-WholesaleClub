@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.oop.groupthirteen.group13simulatingoperationsofwholesaleclub.Bashar.accountOfficer.recordInventoryPurchaseController">
+
+    <children>
+        <Button fx:id="backButton" layoutX="225.0" layoutY="453.0" mnemonicParsing="false"
+                prefHeight="26.0" prefWidth="351.0" text="Back" onAction="#handleBack"/>
+
+        <TableView fx:id="inventoryTable" layoutX="6.0" layoutY="210.0" prefHeight="233.0" prefWidth="789.0">
+            <columns>
+                <TableColumn fx:id="productIdColumn" prefWidth="87.0" text="Product Id"/>
+                <TableColumn fx:id="productNameColumn" prefWidth="161.0" text="Product Name"/>
+                <TableColumn fx:id="priceColumn" prefWidth="165.0" text="Price"/>
+                <TableColumn fx:id="customerNameColumn" prefWidth="183.0" text="Customer Name"/>
+                <TableColumn fx:id="customerNumberColumn" prefWidth="189.0" text="Customer Number"/>
+            </columns>
+        </TableView>
+
+        <ComboBox fx:id="productIdCombo" layoutX="22.0" layoutY="19.0" prefHeight="26.0"
+                  prefWidth="241.0" promptText="Product ID" onAction="#handleProductSelection"/>
+        <TextField fx:id="productNameField" layoutX="278.0" layoutY="19.0" prefHeight="26.0"
+                   prefWidth="277.0" promptText="Product Name" editable="false"/>
+        <TextField fx:id="priceField" layoutX="24.0" layoutY="73.0" prefHeight="26.0"
+                   prefWidth="277.0" promptText="Price" editable="false"/>
+        <TextField fx:id="customerNameField" layoutX="327.0" layoutY="72.0" prefHeight="26.0"
+                   prefWidth="277.0" promptText="Customer Name"/>
+        <TextField fx:id="customerNumberField" layoutX="24.0" layoutY="129.0" prefHeight="26.0"
+                   prefWidth="277.0" promptText="Customer Number"/>
+
+        <Button fx:id="saveButton" layoutX="373.0" layoutY="129.0" mnemonicParsing="false"
+                prefHeight="26.0" prefWidth="275.0" text="Save" onAction="#handleSave"/>
+    </children>
+</AnchorPane>
