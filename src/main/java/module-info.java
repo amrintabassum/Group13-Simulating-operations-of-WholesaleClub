@@ -9,10 +9,7 @@ module com.oop.groupthirteen.group13simulatingoperationsofwholesaleclub {
     exports com.oop.groupthirteen.group13simulatingoperationsofwholesaleclub;
     opens com.oop.groupthirteen.group13simulatingoperationsofwholesaleclub.Amrin.inventoryManager to javafx.fxml;
     opens com.oop.groupthirteen.group13simulatingoperationsofwholesaleclub.Amrin.storeManager to javafx.fxml;
-<<<<<<< HEAD
     opens com.oop.groupthirteen.group13simulatingoperationsofwholesaleclub.Bashar.accountOfficer to javafx.fxml;
     opens com.oop.groupthirteen.group13simulatingoperationsofwholesaleclub.Bashar.Cashier to javafx.fxml;
-=======
->>>>>>> 0bfb682d814a582442ac723f876f2600e3e1b147
 
 }
