@@ -6,7 +6,6 @@ import java.util.List;
 
 public class BinaryFileHelper {
 
-    // ✅ Append a single object to file
     public static void saveObject(File file, Object obj) {
         try {
             createDirIfNotExists(file);
@@ -14,8 +13,8 @@ public class BinaryFileHelper {
             boolean fileExists = file.exists();
             FileOutputStream fos = new FileOutputStream(file, true); // append mode
             ObjectOutputStream oos = fileExists
-                    ? new AppendableObjectOutputStream(fos)  // skips header
-                    : new ObjectOutputStream(fos);           // writes header
+                    ? new AppendableObjectOutputStream(fos)
+                    : new ObjectOutputStream(fos);
 
             oos.writeObject(obj);
             oos.close();
@@ -24,7 +23,6 @@ public class BinaryFileHelper {
         }
     }
 
-    // ✅ Read all objects from binary file
     public static <T> List<T> readAllObjects(File file) {
         List<T> objects = new ArrayList<>();
 
@@ -46,8 +44,6 @@ public class BinaryFileHelper {
 
         return objects;
     }
-
-    // ✅ Overwrite file with full list of objects
     public static <T> void writeAllObjects(File file, List<T> objects) {
         try {
             createDirIfNotExists(file);
@@ -62,7 +58,6 @@ public class BinaryFileHelper {
         }
     }
 
-    // ✅ Create parent directory if it doesn't exist
     private static void createDirIfNotExists(File file) {
         File parent = file.getParentFile();
         if (parent != null && !parent.exists()) {
@@ -70,7 +65,6 @@ public class BinaryFileHelper {
         }
     }
 
-    // ✅ Custom ObjectOutputStream to skip header on append
     private static class AppendableObjectOutputStream extends ObjectOutputStream {
         public AppendableObjectOutputStream(OutputStream out) throws IOException {
             super(out);
@@ -78,7 +72,6 @@ public class BinaryFileHelper {
 
         @Override
         protected void writeStreamHeader() throws IOException {
-            // Do nothing — avoid writing header again
         }
     }
 }
