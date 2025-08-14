@@ -4,13 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
-<<<<<<< HEAD
-=======
-
-/**
- * Controller for the login screen of the Wholesale Club application.
- */
->>>>>>> 0bfb682d814a582442ac723f876f2600e3e1b147
 public class LoginController {
 
     @FXML
