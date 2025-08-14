@@ -51,20 +51,16 @@ public class LoginController {
                 case "Store Manager":
                     SceneSwitcher.switchTo("Amrin/storeManager/storeManagerDashboard");
                     break;
-<<<<<<< HEAD
-
                 case "Account Officer":
                     SceneSwitcher.switchTo("Bashar/accountOfficer/accountOfficer");
                     break;
                 case "Cashier":
                     SceneSwitcher.switchTo("Bashar/Cashier/Cashierdashboard");
-=======
                 case "Account Officer":
                     System.out.println("📝 Account Officer dashboard - Not implemented yet.");
                     break;
                 case "Cashier":
                     System.out.println("💰 Cashier dashboard - Not implemented yet.");
->>>>>>> 0bfb682d814a582442ac723f876f2600e3e1b147
                     break;
                 case "Transport Manager":
                     System.out.println("🚚 Transport Manager dashboard - Not implemented yet.");
